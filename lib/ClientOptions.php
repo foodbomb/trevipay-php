@@ -13,7 +13,7 @@ use Psr\Log\LoggerInterface;
 
 class ClientOptions
 {
-    private const TREVIPAY_API_BASE_URI = 'https://trevipay.app/';
+    public const TREVIPAY_API_BASE_URI = 'https://trevipay.app/';
 
     /**
      * @var LoggerInterface
