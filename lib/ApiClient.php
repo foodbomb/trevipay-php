@@ -107,7 +107,7 @@ class ApiClient implements ApiClientInterface
                 $debugData['response_expected_http_code'] = $transfer->getExpectedStatusCode();
                 $debugData['response_http_code'] = $response->getStatusCode();
                 $debugData['response'] = $this->maskValue->maskValues($responseBody, $transfer->getMethodName());
-                $this->treviPayLogger->error('Error during performing a call to the TreviPay API', $debugData);
+                $this->treviPayLogger->warning('Error during performing a call to the TreviPay API', $debugData);
 
                 $errorResponse = $this->prepareErrorResponse($responseBody);
             } else {
